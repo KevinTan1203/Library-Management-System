@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>ILS by Group 18</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href="{% static 'library_system/assets/css/bootstrap.min.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/assets/css/animate.min.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/assets/css/style.css'%}" type='text/css' media='all'/>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%2C800%7CMontserrat%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CDosis%3A400%2C700&#038;ver=4.5' type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/icons/elegantline/style.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/assets/css/font-awesome.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' href="{% static 'library_system/assets/css/flexslider.css' %}" type='text/css' media='all'/>
+</head>
+<body class="frontpage">
+<div class="page-loader">
+	<img src="{% static 'library_system/assets/img/loader.gif' %}" alt="loader">
+</div>
+
+<!-- Header
+================================================== -->
+<header id="header">
+<div id="mega-menu" class="header header2 header-sticky primary-menu icons-no default-skin zoomIn align-right">
+	<nav class="navbar navbar-default redq">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+			<img src="{% static 'library_system/assets/img/icon.png' %}" alt="logo" width=100px>
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar">
+			<a class="mobile-menu-close"><i class="fa fa-close"></i></a>
+			<div class="menu-top-menu-container">
+				<ul id="menu-top-menu" class="nav navbar-nav nav-list">
+				</ul>
+			</div>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+	</nav>
+</div>
+</header>	
+
+{% block content %}
+<!-- INTRO
+================================================== -->
+<section id="home" style="padding:160px 0;background-image: url(https://media.timeout.com/images/105628370/image.jpg); background-position: center; background-repeat: no-repeat;background-size: cover;background-attachment:fixed;">
+	<div class="container">
+		<div class="textwidget">
+			<h1 class="toptitle">BT2102<br/> INTEGRATED LIBRARY SYSTEM <br/><br/><i class="fa fa-star roundicon"></i>
+			</h1>								
+			<div class="contactstyle topform">										
+				<form action="login" method="post">
+                    {% csrf_token %}
+					<div class="form">
+						{{message}}
+						<input type="text" name="login_username" placeholder="Username">
+						<input type="password" name="login_password" placeholder="Password">
+						<input type="submit" id="submit" class="clearfix btn" value="Login">
+					</div>
+				</form>
+
+				<div class="signup-form">
+    				<a href="sign_up"><u><i>or sign up now!</i></u></a>
+				</div>
+			</div>	
+		</div>
+		</div>
+</section>
+
+<!-- ABOUT
+================================================== -->
+<section id="about" class="whitetext" style="padding:60px;background-color:#d7be69;" >
+	<div class="container">
+		<div class="so-widget-sow-headline">
+			<div class="sow-headline">
+				<h1 class="whitetext">SERVING YOU WITH PASSION</h1>
+			</div>
+		</div>
+		<br/>
+		<div class="w960 text-center">
+		<p>
+			The BT2102 Integrated Library System seeks to be a one-stop online platform for library users to engage in their library transactions.
+		</p>
+		<p>
+			Library users can use this platform to search for books, borrow books, reserve books, and check their existing fines.
+		</p>
+		<p>
+			We hope this service will facilitate you with efficient transactions in the library.
+		</p>
+		</div>
+							
+	</div>
+</section>
+
+<!-- TEAM
+================================================== -->
+<section id="team" class="panel-grid">
+	<div class="nopadding">
+		<!-- #person1 -->
+		<div class="col-md-4" style="background:#141414;">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="https://ak.picdn.net/shutterstock/videos/19013230/thumb/1.jpg" alt="" width="650" height="400" class="img-responsive">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								Find what you need in our vast collection of books!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<p><h2>SEARCH</h2></p>
+					<p><h2>FOR BOOKS</h2></p>
+					<h3> </h3>
+				</div>
+				<div class="separator">
+				</div>
+			</div>
+		</div>
+		<!-- #person2 -->
+		<div class="col-md-4" style="background:#d7be69;">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="http://blogs.bodleian.ox.ac.uk/ssl/wp-content/uploads/sites/136/2020/07/Click-and-Collect-1.jpg"  width="650" alt="" class="img-responsive">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								Get the book you want from our vast collection of books!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<p><h2>BORROW, RETURN</h2></p>
+					<p><h2>AND RESERVE BOOKS</h2></p>
+					<h3> </h3>
+				</div>
+				<div class="separator">
+				</div>
+			</div>	
+		</div>
+		<!-- #person3 -->
+		<div class="col-md-4" style="background:#141414;">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_496612468_2000138820009280460_336567.jpg"  width="650" height="363.05" alt="" class="img-responsive">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								Check your fines and settle payments with ease through this e-platform!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<p><h2>CHECK FINES</h2></p>
+					<p><h2>AND PAYMENTS</h2></p>
+					<h3> </h3>
+				</div>
+				<div class="separator">
+				</div>
+			</div>
+		</div>
+		<!-- end #3 -->
+	</div>
+</section>
+		
+<!-- CONTACT
+================================================== -->
+<section id="contact" class="margintop60 nopadding" style="background:#292929;">
+		<div class="col-md-6 whitetext" style="padding: 30px;">
+			<div class="textwidget">
+				<div class="bookarea">
+					 CONTACT<br>
+					<span class="bordered">COM2-04-36</span><br>
+					<span class="call">651 162783</span>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+</section>
+<!-- THE END OF SECTIONS -->	
+	
+<!-- FOOTER
+================================================== -->
+<footer id="footer" class="footer2">
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<small>
+					&copy; BT2102 Integrated Library System
+					</small>
+				</div>
+				<div class="col-md-6 text-right">
+					<div class="footer-menu">
+						<ul id="menu-footer-links" class="menu">
+							<li>AY20/21 Sem 2 Group 18</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{% endblock %}
+
+<!-- SCRIPTS
+================================================== -->
+<script src="{% static 'library_system/assets/js/jquery.js' %}"></script>
+<script src="{% static 'library_system/assets/js/plugins.js' %}"></script>
+<script src="{% static 'library_system/contact/topvalidate.js' %}"></script>
+<script src="{% static 'library_system/contact/bottomvalidate.js' %}"></script>
+
+</body>
+</html>

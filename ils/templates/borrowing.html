@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>ILS by Group 18</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href="{% static 'library_system/assets/css/bootstrap.min.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/assets/css/animate.min.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/assets/css/style.css'%}" type='text/css' media='all'/>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%2C800%7CMontserrat%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CDosis%3A400%2C700&#038;ver=4.5' type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/icons/elegantline/style.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/assets/css/font-awesome.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' href="{% static 'library_system/assets/css/flexslider.css' %}" type='text/css' media='all'/>
+</head>
+<body class="frontpage">
+<div class="page-loader">
+	<img src="{% static 'library_system/assets/img/loader.gif' %}" alt="loader">
+</div>
+
+<!-- Header
+================================================== -->
+<header id="header">
+<div id="mega-menu" class="header header2 header-sticky primary-menu icons-no default-skin zoomIn align-right">
+	<nav class="navbar navbar-default redq">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="main">
+			<img src="{% static 'library_system/assets/img/icon.png' %}" alt="logo" width=100px>
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar">
+			<a class="mobile-menu-close"><i class="fa fa-close"></i></a>
+			<div class="menu-top-menu-container">
+				<ul id="menu-top-menu" class="nav navbar-nav nav-list">
+					<li><a href="main/../">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+	</nav>
+</div>
+</header>	
+
+<!-- INTRO
+================================================== -->
+<section id="home" style="padding:160px 0;background-image: url(https://www.galeriemagazine.com/wp-content/uploads/2018/05/TrinitySelect.jpg); background-position: center; background-repeat: no-repeat;background-size: cover;background-attachment:fixed;">
+	<div class="container">
+		<div class="textwidget">
+			<h1 class="toptitle"><p>Borrow, Return and</p> Reserve Management
+			</h1>							
+		</div>
+		</div>
+</section>
+
+{% block content %}
+<!-- SERVICES
+================================================== -->		
+<section id="services" class="services margintop60">
+	<div class="container">
+		<div class="sow-headline">
+            <h1>Borrow or Reserve Books</h1>
+			<div class="decoration">
+				<div class="decoration-inside">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Borrow Book/Reserve Book</h3>
+				<h4>Please enter the book ID you would like to borrow/reserve</h4>
+                <form action="borrowed">
+                    <input type="text" name="book_id" placeholder="Enter Book ID">
+                    <input type="submit" id="submit" class="clearfix btn" value="Borrow!">
+                </form>
+			</div>
+			<div class="col-md-6">
+				<h3>Books currently borrowed by you</h3>
+				{% for book in current_borrowing %}
+					<p>
+					<br>
+					<STRONG>Book ID:</STRONG> {{book.0}}<br>
+					<STRONG>Title:</STRONG> {{book.1}}<br>
+					<STRONG>Expected Due Date:</STRONG> {{book.2}}<br>
+					</p>
+				{% endfor%}
+				<br><br>
+
+				<h3>Books currently reserved by you</h3>
+				<h4>(Now available)</h4>
+				{% for book in available_reservation %}
+					<p>
+					<br>
+					<STRONG>Book ID:</STRONG> {{book.0}}<br>
+					<STRONG>Title:</STRONG> {{book.1}}<br>
+					</p>
+				{% endfor%}
+				<br><br>
+
+				<h3>Books currently reserved by you</h3>
+				<h4>(Currently Unavailable)</h4>
+				{% for book in unavailable_reservation %}
+					<p>
+					<br>
+					<STRONG>Book ID:</STRONG> {{book.0}}<br>
+					<STRONG>Title:</STRONG> {{book.1}}<br>
+					</p>
+				{% endfor%}
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+<!-- CONTACT
+================================================== -->
+<section id="contact" class="margintop60 nopadding" style="background:#292929;">
+		<div class="col-md-6 whitetext" style="padding: 30px;">
+			<div class="textwidget">
+				<div class="bookarea">
+					 CONTACT<br>
+					<span class="bordered">COM2-04-36</span><br>
+					<span class="call">651 162783</span>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+</section>
+<!-- THE END OF SECTIONS -->	
+	
+<!-- FOOTER
+================================================== -->
+<footer id="footer" class="footer2">
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<small>
+					&copy; BT2102 Integrated Library System
+					</small>
+				</div>
+				<div class="col-md-6 text-right">
+					<div class="footer-menu">
+						<ul id="menu-footer-links" class="menu">
+							<li>AY20/21 Sem 2 Group 18</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- SCRIPTS
+================================================== -->
+<script src="{% static 'library_system/assets/js/jquery.js' %}"></script>
+<script src="{% static 'library_system/assets/js/plugins.js' %}"></script>
+<script src="{% static 'library_system/contact/topvalidate.js' %}"></script>
+<script src="{% static 'library_system/contact/bottomvalidate.js' %}"></script>
+
+</body>
+</html>

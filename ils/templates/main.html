@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>ILS by Group 18</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href="{% static 'library_system/assets/css/bootstrap.min.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/assets/css/animate.min.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/assets/css/style.css'%}" type='text/css' media='all'/>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%2C800%7CMontserrat%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CDosis%3A400%2C700&#038;ver=4.5' type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/icons/elegantline/style.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{% static 'library_system/assets/css/font-awesome.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' href="{% static 'library_system/assets/css/flexslider.css' %}" type='text/css' media='all'/>
+</head>
+<body class="frontpage">
+<div class="page-loader">
+	<img src="{% static 'library_system/assets/img/loader.gif' %}" alt="loader">
+</div>
+
+<!-- Header
+================================================== -->
+<header id="header">
+<div id="mega-menu" class="header header2 header-sticky primary-menu icons-no default-skin zoomIn align-right">
+	<nav class="navbar navbar-default redq">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+			<img src="{% static 'library_system/assets/img/icon.png' %}" alt="logo" width=100px>
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar">
+			<a class="mobile-menu-close"><i class="fa fa-close"></i></a>
+			<div class="menu-top-menu-container">
+				<ul id="menu-top-menu" class="nav navbar-nav nav-list">
+					<li><a href="../">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+	</nav>
+</div>
+</header>	
+
+{% block content %}
+<!-- INTRO
+================================================== -->
+<section id="home" style="padding:160px 0;background-image: url(https://www.galeriemagazine.com/wp-content/uploads/2018/05/TrinitySelect.jpg); background-position: center; background-repeat: no-repeat;background-size: cover;background-attachment:fixed;">
+	<div class="container">
+		<div class="textwidget">
+
+			<h1 class="toptitle">Integrated Library System
+			</h1>
+			<h2 class="toptitle">What would you like to do today, {{current_user}}?
+			</h2>
+		</div>
+		</div>
+</section>
+
+<!-- TEAM
+================================================== -->
+<section id="team" class="panel-grid">
+	<div class="nopadding">
+		<!-- #person1 -->
+        <a href="/search">
+		<div class="col-md-4" style="background:#141414;">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="https://ak.picdn.net/shutterstock/videos/19013230/thumb/1.jpg" alt="" width="650" width="400" class="img-responsive">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								<u>Click here to find a book you are interested in.</u>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<p><h2>BOOK</h2></p>
+					<p><h2>SEARCH</h2></p>
+					<h3> </h3>
+				</div>
+				<div class="separator">
+				</div>
+			</div>
+		</div>
+        </a>
+		<!-- #person2 -->
+        <a href="borrow_and_return">
+		<div class="col-md-4" style="background:#d7be69;">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="http://blogs.bodleian.ox.ac.uk/ssl/wp-content/uploads/sites/136/2020/07/Click-and-Collect-1.jpg" width="650" alt="" class="img-responsive">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								<u>Click here to manage your borrowings, returns, and reservations.</u>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<p><h2>BORROW, RETURN</h2></p>
+					<p><h2>AND RESERVE MANAGEMENT</h2></p>
+					<h3> </h3>
+				</div>
+				<div class="separator">
+				</div>
+			</div>	
+		</div>
+        </a>
+		<!-- #person3 -->
+        <a href="/fines_and_payments">
+		<div class="col-md-4" style="background:#141414;">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_496612468_2000138820009280460_336567.jpg"  width="650" height="363.05" alt="" class="img-responsive">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								<u>Click here to check your fines and settle payments.</u>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<p><h2>FINES AND</h2></p>
+					<p><h2>PAYMENTS MANAGEMENT</h2></p>
+					<h3> </h3>
+				</div>
+				<div class="separator">
+				</div>
+			</div>
+		</div>
+        </a>
+		<!-- end #3 -->
+
+	</div>
+</section>
+		
+
+<!-- CONTACT
+================================================== -->
+<section id="contact" class="margintop60 nopadding" style="background:#292929;">
+		<div class="col-md-6 whitetext" style="padding: 30px;">
+			<div class="textwidget">
+				<div class="bookarea">
+					 CONTACT<br>
+					<span class="bordered">COM2-04-36</span><br>
+					<span class="call">651 162783</span>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+</section>
+<!-- THE END OF SECTIONS -->	
+	
+<!-- FOOTER
+================================================== -->
+<footer id="footer" class="footer2">
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<small>
+					&copy; BT2102 Integrated Library System
+					</small>
+				</div>
+				<div class="col-md-6 text-right">
+					<div class="footer-menu">
+						<ul id="menu-footer-links" class="menu">
+							<li>AY20/21 Sem 2 Group 18</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{% endblock %}
+
+<!-- SCRIPTS
+================================================== -->
+<script src="{% static 'library_system/assets/js/jquery.js' %}"></script>
+<script src="{% static 'library_system/assets/js/plugins.js' %}"></script>
+<script src="{% static 'library_system/contact/topvalidate.js' %}"></script>
+<script src="{% static 'library_system/contact/bottomvalidate.js' %}"></script>
+
+</body>
+</html>
